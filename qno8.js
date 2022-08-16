@@ -1,27 +1,29 @@
 function test_prime(n)
 {
+  debugger
 
   if (n===1)
   {
-    return false;
+    return "Neither prime nor Composite";
   }
   else if(n === 2)
   {
-    return true;
+    return 'Prime';
   }else
   {
     for(var x = 2; x < n; x++)
     {
       if(n % x === 0)
       {
-        return false;
+        return 'Not prime';
       }
     }
-    return true;  
+    return 'Prime';  
   }
 }
+var num = +prompt('Write a number to check whether a number is prime.');
 
-console.log(test_prime(4));
+console.log(test_prime(num));
 
 // function isPrime () {
 // var num = prompt('Write a number');
